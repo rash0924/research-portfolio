@@ -4,6 +4,31 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: 4rem 2rem 1rem;
   width: 100%;
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.footer-container:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border-top-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 -10px 40px -20px rgba(16, 185, 129, 0.1);
+}
+
+.footer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  transition: width 0.6s ease;
+}
+
+.footer-container:hover::before {
+  width: 80%;
 }
 
 .footer-content {
@@ -13,6 +38,8 @@
   grid-template-columns: 2fr 1fr 1fr;
   gap: 4rem;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-brand p {
@@ -26,6 +53,8 @@
   color: var(--text-primary);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .footer-links ul {
@@ -37,22 +66,45 @@
 
 .footer-links a {
   color: var(--text-secondary);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .footer-links a:hover {
   color: var(--accent-primary);
+  transform: translateX(8px);
 }
 
 .footer-contact .social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  color: var(--text-secondary);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon:hover {
+  color: var(--accent-primary);
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  transform: translateY(-5px) rotate(8deg);
 }
 
 .university-text {
   color: var(--text-secondary);
   font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .footer-bottom {
@@ -62,12 +114,16 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .footer-container {
+    padding: 3rem 1.5rem 1.5rem;
   }
 }

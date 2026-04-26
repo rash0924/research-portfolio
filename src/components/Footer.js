@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Connect</h3>
           <div className="social-icons">
-            <a href="#" className="social-icon"><Mail size={20} /></a>
-            <a href="#" className="social-icon"><Globe size={20} /></a>
-            <a href="#" className="social-icon"><MessageSquare size={20} /></a>
+            <a href="mailto:info@sliit.lk" className="social-icon" title="Email Us"><Mail size={20} /></a>
+            <a href="https://www.sliit.lk" target="_blank" rel="noopener noreferrer" className="social-icon" title="Visit University"><Globe size={20} /></a>
+            <a href="https://teavision360.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="Contact Us"><MessageSquare size={20} /></a>
           </div>
           <p className="university-text">Sri Lanka Institute of Information Technology (SLIIT)</p>
         </div>

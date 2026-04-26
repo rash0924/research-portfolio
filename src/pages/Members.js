@@ -23,9 +23,9 @@ const Members = () => {
             <span className="member-role">{member.role}</span>
             <p className="member-bio">{member.bio}</p>
             <div className="member-socials">
-              <a href="#" className="social-icon"><Mail size={18} /></a>
-              <a href="#" className="social-icon"><Globe size={18} /></a>
-              <a href="#" className="social-icon"><MessageSquare size={18} /></a>
+              <a href={`mailto:${member.id}@sliit.lk`} className="social-icon" title="Email"><Mail size={18} /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn"><Globe size={18} /></a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub"><MessageSquare size={18} /></a>
             </div>
           </div>
         ))}
