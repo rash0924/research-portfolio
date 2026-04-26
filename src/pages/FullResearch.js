@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { fullResearchData } from '../data/fullResearchData';
 import { ArrowLeft, BookOpenCheck } from 'lucide-react';
-import './FeatureDetail.css'; // We can safely reuse the awesome CSS from the feature details!
+import ExpandableCard from '../components/ExpandableCard';
+import './FeatureDetail.css'; 
 
 const FullResearch = () => {
   return (
@@ -19,38 +20,92 @@ const FullResearch = () => {
       </header>
 
       <div className="detail-sections">
-        <section className="detail-card glass-panel delay-100">
-          <div className="section-header">
-            <h3>Overall Introduction</h3>
-            <div className="divider"></div>
-          </div>
+        <ExpandableCard title="Overall Introduction" delay="100">
           <p>{fullResearchData.intro}</p>
-        </section>
+        </ExpandableCard>
 
-        <section className="detail-card glass-panel delay-200">
-          <div className="section-header">
-            <h3>Overall Research Gap</h3>
-            <div className="divider"></div>
-          </div>
-          <p>{fullResearchData.gap}</p>
-        </section>
+        {fullResearchData.literatureSurvey && (
+          <ExpandableCard title="Literature Survey" delay="150">
+            <div className="literature-survey-content">
+              <p>{fullResearchData.literatureSurvey.intro}</p>
+              <div className="methodology-list">
+                {fullResearchData.literatureSurvey.sections.map((section, index) => (
+                  <div key={index} className="methodology-item">
+                    <h4>{section.title}</h4>
+                    <p>{section.content}</p>
+                  </div>
+                ))}
+              </div>
+              
+              {fullResearchData.literatureSurvey.table && (
+                <div className="survey-table-container">
+                  <h4>Table 3: Summary of Related Studies</h4>
+                  <div className="table-responsive">
+                    <table className="survey-table">
+                      <thead>
+                        <tr>
+                          <th>Method Used</th>
+                          <th>Application</th>
+                          <th>Key Outcomes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {fullResearchData.literatureSurvey.table.map((row, index) => (
+                          <tr key={index}>
+                            <td>{row.method}</td>
+                            <td>{row.application}</td>
+                            <td>{row.outcome}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
 
-        <section className="detail-card glass-panel delay-300">
-          <div className="section-header">
-            <h3>Overall Methodology</h3>
-            <div className="divider"></div>
+              {fullResearchData.literatureSurvey.summary && (
+                <div className="survey-summary">
+                  <p>{fullResearchData.literatureSurvey.summary}</p>
+                </div>
+              )}
+            </div>
+          </ExpandableCard>
+        )}
+
+        <ExpandableCard title="Overall Research Gap and Research Problem" delay="200">
+          <div className="methodology-list">
+            <div className="methodology-item">
+              <h4>Research Gap</h4>
+              <p>{fullResearchData.gap}</p>
+            </div>
+            {fullResearchData.problem && (
+              <div className="methodology-item">
+                <h4>Research Problem</h4>
+                <p>{fullResearchData.problem}</p>
+              </div>
+            )}
           </div>
-          <p>{fullResearchData.methodology}</p>
-        </section>
+        </ExpandableCard>
+
+        <ExpandableCard title="Overall Methodology" delay="300">
+          {Array.isArray(fullResearchData.methodology) ? (
+            <div className="methodology-list">
+              {fullResearchData.methodology.map((item, index) => (
+                <div key={index} className="methodology-item">
+                  <h4>{item.title}</h4>
+                  <p>{item.content}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>{fullResearchData.methodology}</p>
+          )}
+        </ExpandableCard>
 
         {fullResearchData.results && (
-          <section className="detail-card glass-panel delay-400">
-            <div className="section-header">
-              <h3 className="gradient-text">Key Results & Findings</h3>
-              <div className="divider"></div>
-            </div>
+          <ExpandableCard title="Key Results & Findings" delay="400">
             <p>{fullResearchData.results}</p>
-          </section>
+          </ExpandableCard>
         )}
       </div>
     </div>

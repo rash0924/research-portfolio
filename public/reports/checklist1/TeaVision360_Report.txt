@@ -1,0 +1,74 @@
+TeaVision360
+TeaVision360: A Complete AI and IoT Platform for Quality, Health, and Market Decisions in Tea Farming
+Project ID: RP [25-26J-178]
+
+🌟 Overview
+
+TeaVision360 is an integrated research platform that leverages Artificial Intelligence (AI) and Internet of Things (IoT) technologies to improve the tea production process. The system focuses on automating tea leaf grading, monitoring environmental factors, and analyzing market trends to enhance productivity, sustainability, and profit in tea farming.
+
+⚠️ Problem Statement
+
+In Sri Lanka, tea grading and quality evaluation still rely heavily on manual observation, which is time-consuming, inconsistent, and dependent on expert availability. This lack of automation leads to inaccuracies in grading, delayed market decisions, and reduced profitability for tea producers. Additionally, limited use of IoT-based monitoring systems results in poor tracking of environmental factors such as soil moisture, temperature, and humidity, which directly affect tea quality. A unified AI and IoT-driven solution is therefore essential to improve grading accuracy, optimize production, and support data-driven market insights.
+
+🎯 Purpose
+
+The TeaVision360 platform is developed to:
+
+🍃 Automate tea leaf grading using AI and computer vision to ensure consistent and accurate quality evaluation.
+🌡️ Integrate IoT sensors to monitor soil, temperature, and humidity for maintaining ideal growing conditions.
+📊 Analyze market trends and price forecasts to help farmers make data-driven business decisions.
+🌱 Promote sustainable tea production by providing real-time insights that enhance yield and resource management.
+
+🧩 Objectives
+
+- Automate tea leaf quality grading using computer vision.
+- Monitor soil, humidity, and temperature using IoT sensors.
+- Analyze and predict market demand and pricing trends.
+- Support data-driven decisions for tea farmers and producers.
+
+✅ Components
+🍃 Automated Tea Leaf Grading using AI and IoT (Weerawardane K.W.R.C)
+    ✔️ Automate the grading of tea leaves using computer vision and deep learning.
+    Capture and analyze leaf images for color, size, and texture.
+    Classify quality grades (A, B, C) using trained AI models.
+    Detect impurities or damaged leaves automatically.
+    ✔️ Provide instant grading results and data storage for review.
+    ✔️ Generate grading reports for quality assurance.
+
+🌿 Identical Disease Suggestion using AI Image Recognition (Malshan W.A.D.D.I)
+    ✔️ Identify common tea plant diseases through image analysis.
+    Capture diseased leaf images via IoT camera modules.
+    Compare symptoms with the trained dataset.
+    Suggest probable disease names and remedies.
+    ✔️ Send real-time alerts to farmers via dashboard or mobile app.
+    ✔️ Maintain disease history records for future prediction.
+
+📊 Market Analysis and Price Forecasting (Jayasundara K.B.S.M)
+
+    ✔️ Collect and analyze market demand, pricing, and export trends.
+    Use machine learning models to predict future tea prices.
+    Visualize market changes and seasonal trends.
+    Provide region-based demand insights for better selling strategies.
+    ✔️ Support farmers and companies with data-driven business decisions.
+    ✔️ Generate detailed analytics dashboards and reports.
+
+🌱 Data-Driven Fertilization and Growth Monitoring (Udawela U.K.R.M.R.N)
+
+    ✔️ Use IoT sensor data (soil moisture, temperature, humidity) to optimize fertilization.
+    Analyze soil nutrient levels and suggest fertilizer types.
+    Schedule irrigation and nutrient cycles automatically.
+    ✔️ Provide real time weather alerts
+    ✔️ Provide smart alerts and recommendations for sustainable farming.
+    ✔️ Generate environmental performance reports.
+
+ 👥 Team Members
+
+[Weerawardane K.W.R.C IT22239402] – Automated Tea Grading using AI and IoT
+[Malshan W.A.D.D.I IT22137050] – Identical Disease Suggestion
+[Jayasundara K.B.S.M IT22241832] – Market Analysis and Price Forecasting
+[Udawela U.K.R.M.R.N IT22271396] – Data-Driven Fertilization
+
+📦 Technologies
+Python, TensorFlow, OpenCV
+Raspberry Pi, Arduino
+PostgreSQL, Flask, AWS

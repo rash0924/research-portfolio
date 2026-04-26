@@ -65,8 +65,32 @@ export const documentCategories = [
     label: "CheckList Documents",
     icon: "✅",
     color: "#ec4899",
-    files: [
-      { name: "Project Checklist", type: "PDF", link: "/reports/checklist/project_checklist.pdf" }
+    subCategories: [
+      {
+        id: "checklist1",
+        label: "Checklist - Set 1 (TXT)",
+        files: [
+          { name: "GitHub Repository", type: "TXT", link: "/reports/checklist1/GitHub Repository.txt" },
+          { name: "TeaVision360 Report", type: "TXT", link: "/reports/checklist1/TeaVision360_Report.txt" }
+        ]
+      },
+      {
+        id: "checklist2",
+        label: "Checklist - Set 2 (XLSX)",
+        files: [
+          { name: "MS Planner Report", type: "XLSX", link: "/reports/checklist2/25-26J-178_MS_Planner_Report (1).xlsx" }
+        ]
+      },
+      {
+        id: "checklist3",
+        label: "Checklist - Set 3",
+        files: []
+      },
+      {
+        id: "checklist4",
+        label: "Checklist - Set 4",
+        files: []
+      }
     ]
   },
   {

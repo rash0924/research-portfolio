@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { componentsData } from '../data/componentsData';
 import { ArrowLeft, Leaf, BugOff, Cpu, TrendingUp } from 'lucide-react';
+import ExpandableCard from '../components/ExpandableCard';
 import './FeatureDetail.css';
 
 const IconMap = {
@@ -40,38 +41,22 @@ const FeatureDetail = () => {
       </header>
 
       <div className="detail-sections">
-        <section className="detail-card glass-panel delay-100">
-          <div className="section-header">
-            <h3>Introduction</h3>
-            <div className="divider"></div>
-          </div>
+        <ExpandableCard title="Introduction" delay="100" titleColor={feature.color}>
           <p>{feature.intro}</p>
-        </section>
+        </ExpandableCard>
 
-        <section className="detail-card glass-panel delay-200">
-          <div className="section-header">
-            <h3>Research Gap</h3>
-            <div className="divider"></div>
-          </div>
+        <ExpandableCard title="Research Gap" delay="200" titleColor={feature.color}>
           <p>{feature.gap}</p>
-        </section>
+        </ExpandableCard>
 
-        <section className="detail-card glass-panel delay-300">
-          <div className="section-header">
-            <h3>Methodology</h3>
-            <div className="divider"></div>
-          </div>
+        <ExpandableCard title="Methodology" delay="300" titleColor={feature.color}>
           <p>{feature.methodology}</p>
-        </section>
+        </ExpandableCard>
 
         {feature.results && (
-          <section className="detail-card glass-panel delay-400">
-            <div className="section-header">
-              <h3 style={{ color: feature.color }}>Results & Findings</h3>
-              <div className="divider" style={{ background: `linear-gradient(90deg, ${feature.color}, transparent)` }}></div>
-            </div>
+          <ExpandableCard title="Results & Findings" delay="400" titleColor={feature.color}>
             <p>{feature.results}</p>
-          </section>
+          </ExpandableCard>
         )}
       </div>
     </div>

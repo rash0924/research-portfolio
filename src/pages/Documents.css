@@ -69,6 +69,11 @@
   gap: 0.25rem;
 }
 
+.nav-item-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .sidebar-tab {
   width: 100%;
   display: flex;
@@ -110,6 +115,37 @@
 .tab-chevron {
   flex-shrink: 0;
   animation: slideIn 0.2s ease;
+  transition: transform 0.3s ease;
+}
+
+.tab-chevron.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.sub-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  margin-top: 2px;
+  gap: 2px;
+  position: relative;
+}
+
+.sub-nav::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0.75rem;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sub-tab {
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.8rem !important;
+  border-left: none !important;
+  border-radius: 8px !important;
 }
 
 @keyframes slideIn {
@@ -149,6 +185,15 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.parent-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 2px;
 }
 
 .panel-title {

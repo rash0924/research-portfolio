@@ -96,6 +96,97 @@
   font-size: 1.05rem;
 }
 
+.methodology-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.methodology-item h4 {
+  color: var(--accent-secondary);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.methodology-item p {
+  margin-bottom: 0;
+}
+
+.literature-survey-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.survey-table-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.survey-table-container h4 {
+  color: var(--accent-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.survey-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.survey-table th {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-primary);
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.survey-table td {
+  padding: 1rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.5;
+}
+
+.survey-table tr:last-child td {
+  border-bottom: none;
+}
+
+.survey-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+}
+
+.survey-summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.survey-summary p {
+  margin: 0;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
 @media (max-width: 768px) {
   .detail-card {
     padding: 1.5rem;
