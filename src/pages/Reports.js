@@ -1,6 +1,6 @@
 import React from 'react';
 import { reportsData, individualReportsData } from '../data/reports';
-import { FileText, Calendar, Download, User } from 'lucide-react';
+import { Calendar, Download, User } from 'lucide-react';
 import './Reports.css';
 
 const Reports = () => {

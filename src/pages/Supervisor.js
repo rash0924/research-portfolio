@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, BookOpen, GraduationCap, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import './Supervisor.css';
 
 const Supervisor = () => {
