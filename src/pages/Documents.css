@@ -340,5 +340,24 @@
   }
   .file-card {
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .file-info {
+    width: calc(100% - 60px);
+  }
+
+  .file-name {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .file-download-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 }
