@@ -5,6 +5,9 @@ export const membersData = [
     role: 'Group Leader / Undergraduate @ SLIIT',
     avatar: '/images/weerawardane.jpeg',
     bio: 'Lead Developer for the AI and IoT Based Tea Leaf Grading System.',
+    email: 'rashini.weerawardane01@gmail.com',
+    phone: '0710527386',
+    linkedin: 'https://www.linkedin.com/in/rashini-weerawardane-a7215a262',
   },
   {
     id: 2,
@@ -12,6 +15,9 @@ export const membersData = [
     role: 'Undergraduate @ SLIIT',
     avatar: '/images/malshan.jpeg',
     bio: 'Architected the YOLOv10-based system to identify tea leaf diseases and nutrient deficiencies.',
+    email: 'imdulaj926@gmail.com',
+    phone: '0778838492',
+    linkedin: 'https://www.linkedin.com/in/dulaj-indula-369083235',
   },
   {
     id: 3,
@@ -19,6 +25,9 @@ export const membersData = [
     role: 'Undergraduate @ SLIIT',
     avatar: '/images/udawela.jpeg',
     bio: 'Developed the data-driven fertilization module using continuous IoT soil monitoring and LSTM models.',
+    email: 'rashmika10526@gmail.com',
+    phone: '0713355775',
+    linkedin: 'https://www.linkedin.com/in/rashmika-nimesh-ba1149264',
   },
   {
     id: 4,
@@ -26,5 +35,8 @@ export const membersData = [
     role: 'Undergraduate @ SLIIT',
     avatar: '/images/jayasundara.jpeg',
     bio: 'Engineered the AI-Based Tea Market Analysis, Price Forecasting, and Risk Management system.',
+    email: 'kbsamadhi77@gmail.com',
+    phone: '0765830701',
+    linkedin: 'https://www.linkedin.com/in/samadhi-jayasundara',
   }
 ];
